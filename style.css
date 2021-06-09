@@ -17,7 +17,7 @@ body, .logs{
 }
 .logs{
     width:400px;
-    height:600px;
+    height:auto;
     background-color:hsl(0, 0%, 99%);
  flex-direction:column;
  align-items:center;
@@ -36,12 +36,12 @@ border-radius:20px 0 0 20px;
     border-radius:0px 20px 20px 0px;
 }
 .logs:hover{
-    background-color:hsl(223, 87%, 73%);
+    background-color:hsl(237, 63%, 64%);
     border-radius:20px;
     width:430px;
-    height:630px;
+    height: calc( 480px + 30px);
 }
-.logs:hover p, .logs:hover h3{
+.logs:hover p, .logs:hover h3, .logs:hover span{
     color:hsl(0, 0%, 99%);
 }
 
@@ -52,7 +52,7 @@ font-size:35px;
 font-weight:700;
 }
 h3, span{
-    font-size:20px;
+    font-size:15px;
 }
 h2, h3, span{
     color: hsl(233, 13%, 49%);
@@ -78,4 +78,48 @@ text-align:center;
 }
 span{
     padding:20px 0 20px 0;
+}
+button{
+    background-image: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    border:none;
+    width:80%;
+    height:45px;
+    border-radius:5px;
+    color:hsl(0, 0%, 99%);
+    font-size:12px;
+    letter-spacing:0.5px;
+    font-family: 'Montserrat', sans-serif;
+    margin:40px 0 40px 0;
+    cursor:pointer;
+}
+
+.logs:hover button{
+    background-image:none;
+    background-color:hsl(0, 0%, 99%);
+  color:hsl(237, 63%, 64%);
+
+}
+
+.toggle{
+    position:absolute;
+    top:15%;
+    width:60px;
+    height:30px;
+    border-radius:20px;
+    background-image:linear-gradient(to right,hsl(236, 72%, 92%),hsl(237, 34%, 80%));
+}
+.ball{
+    width:25px;
+    height:25px;
+    background-color: hsl(0, 0%, 99%);
+    border-radius:50%;
+    position:relative;
+    transform:translate(10%, 8%);
+}
+
+.show{
+transform:translate(120%, 8%);
+}
+.color{
+    background-image: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
 }

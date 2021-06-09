@@ -3,3 +3,45 @@
     margin:0;
     padding:0;
 }
+body{
+    background-color:hsl(0, 0%, 95%);
+    font-family:'Libre Franklin', sans-serif;
+    height:100vh;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+    background:url(images/bg-bottom.svg) left bottom no-repeat, url(images/bg-top.svg) right top no-repeat;
+    background-size: 25%, 23%;
+}
+body{
+    display:flex;
+}
+.logs{
+    width:400px;
+    height:600px;
+    background-color:hsl(0, 0%, 99%);
+    box-shadow: 5px 0px 20px hsl(0, 0%, 69%);
+}
+.logs:first-child{
+border-radius:20px 0 0 20px;
+}
+.logs:last-child{
+    border-radius:0px 20px 20px 0px;
+}
+.logs:hover{
+    background-color:hsl(223, 87%, 73%);
+    border-radius:20px;
+    width:430px;
+    height:630px;
+}
+.logs:nth-child(2){
+    background-color:hsl(223, 87%, 73%);
+    border-radius:20px;
+    width:430px;
+    height:630px;
+}
+ .logs:first-child:hover <.divi{
+    width:400px;
+    height:600px;
+    background-color:hsl(0, 0%, 99%);
+ }

@@ -4,28 +4,35 @@
     padding:0;
 }
 body{
-    background-color:hsl(0, 0%, 95%);
-    font-family:'Libre Franklin', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     height:100vh;
     flex-direction:row;
     align-items:center;
     justify-content: center;
-    background:url(images/bg-bottom.svg) left bottom no-repeat, url(images/bg-top.svg) right top no-repeat;
+    background:url(images/bg-bottom.svg) left bottom no-repeat, url(images/bg-top.svg) right top no-repeat, hsl(240, 78%, 98%);
     background-size: 25%, 23%;
 }
-body{
+body, .logs{
     display:flex;
 }
 .logs{
     width:400px;
     height:600px;
     background-color:hsl(0, 0%, 99%);
-    box-shadow: 5px 0px 20px hsl(0, 0%, 69%);
+ flex-direction:column;
+ align-items:center;
+ padding-top:40px;
 }
-.logs:first-child{
+.viens, .tris{
+    box-shadow:  0px 8px 25px hsl(240, 9%, 95%), 0px -5px 25px hsl(240, 9%, 95%);
+}
+.divi{
+    z-index:1;
+}
+.viens{
 border-radius:20px 0 0 20px;
 }
-.logs:last-child{
+.tris{
     border-radius:0px 20px 20px 0px;
 }
 .logs:hover{
@@ -34,14 +41,41 @@ border-radius:20px 0 0 20px;
     width:430px;
     height:630px;
 }
-.logs:nth-child(2){
-    background-color:hsl(223, 87%, 73%);
-    border-radius:20px;
-    width:430px;
-    height:630px;
+.logs:hover p, .logs:hover h3{
+    color:hsl(0, 0%, 99%);
 }
- .logs:first-child:hover <.divi{
-    width:400px;
-    height:600px;
-    background-color:hsl(0, 0%, 99%);
- }
+
+h2{
+    position:absolute;
+ top:10%;
+font-size:35px;
+font-weight:700;
+}
+h3, span{
+    font-size:20px;
+}
+h2, h3, span{
+    color: hsl(233, 13%, 49%);
+}
+p{
+    font-size:70px;
+    color: hsl(232, 13%, 33%);
+    padding:20px 0 20px 0;
+}
+p::before{
+    content:"\0024";
+    padding-right: 10px;
+    font-size:45px;
+    position:absolute;
+    transform:translate(-35px, 18px);
+}
+
+span:not(.no){
+border-top:1px solid   hsl(234, 14%, 74%);
+border-bottom:1px solid   hsl(234, 14%, 74%);
+width:80%;
+text-align:center;
+}
+span{
+    padding:20px 0 20px 0;
+}

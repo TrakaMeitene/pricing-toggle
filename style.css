@@ -22,7 +22,7 @@ body, .logs{
  flex-direction:column;
  align-items:center;
  padding-top:40px;
- margin-top:40px;
+ margin-top:80px;
 }
 .viens, .tris{
     box-shadow:  0px 8px 25px hsl(240, 9%, 95%), 0px -5px 25px hsl(240, 9%, 95%);
@@ -37,13 +37,13 @@ border-radius:20px 0 0 20px;
 .tris{
     border-radius:0px 20px 20px 0px;
 }
-.logs:hover, .divi{
+ .divi{
     background-color:hsl(237, 63%, 64%);
     border-radius:20px;
     width:430px;
     height: calc( 480px + 30px);
 }
-.logs:hover p, .logs:hover h3, .logs:hover span, .divi p, .divi h2, .divi h3, .divi span{
+.divi p, .divi h2, .divi h3, .divi span{
     color:hsl(0, 0%, 99%);
 }
 
@@ -95,11 +95,17 @@ button{
     cursor:pointer;
 }
 
-.logs:hover button, .divi button{
+button:hover, .divi button{
     background-image:none;
     background-color:hsl(0, 0%, 99%);
   color:hsl(237, 63%, 64%);
+  border:1px solid hsl(232, 13%, 33%);
 
+}
+.divi button:hover{
+background-color: hsl(237, 63%, 64%);
+color:hsl(0, 0%, 99%);
+border:1px solid hsl(0, 0%, 99%);
 }
 
 .toggle{
@@ -143,3 +149,33 @@ transform:translate(122%, 8%);
     color:hsl(234, 14%, 74%);
 }
 
+@media screen and (min-width:240px) and (max-width:900px){
+    body{
+        flex-direction:column;
+        height:auto;
+        padding:60px 0 60px 0;
+
+    }
+    .logs{
+        width:90%;
+        border-radius:20px;
+     
+    }
+    .viens{
+        margin-top:80px;
+    }
+    h2{
+        position:initial;
+    }
+    .toggle{
+        top:110px;
+    }
+    p{
+        font-size:50px;
+    }
+    p::before{
+        transform: translate(-35px, 10px);
+        font-size: 35px;
+    }
+
+}
